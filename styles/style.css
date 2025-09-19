@@ -106,11 +106,11 @@
   --font-family-heading: "Sedgwick Ave", serif;
   --font-family-project-title: "Sedgwick Ave", serif;
   /* Core Colours */
-  --color-text-primary: #222;
-  --color-text-secondary: #333;
+  --color-text-primary: rgb(255, 255, 255);
+  --color-text-secondary: rgb(255, 255, 255);
   --color-accent-primary: #5200ff;
   --color-accent-secondary: #ff057c;
-  --color-overlay-primary: #5200ff;
+  --color-overlay-primary: #0a31f7;
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
@@ -953,6 +953,7 @@ a.nav-link-primary:hover {
 .footer-contact-social {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
+  text-align: right;
 }
 /* -------------------------------------------------------------------------- */
 /* 🌊 FULL-WIDTH BOTTOM SECTION                                               */
