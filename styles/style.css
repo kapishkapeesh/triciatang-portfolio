@@ -110,7 +110,7 @@
   --color-text-secondary: rgb(255, 255, 255);
   --color-accent-primary: #5200ff;
   --color-accent-secondary: #ff057c;
-  --color-overlay-primary: #0a31f7;
+  --color-overlay-primary: #ff0607;
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
@@ -321,25 +321,6 @@ svg {
 /* ------------------------------ */
 
 /* Small interactive elements (buttons, inputs) */
-.rounded-small {
-  border-radius: var(--radius-sm);
-}
-
-/* Default containers (cards, dropdowns) */
-.rounded-medium {
-  border-radius: var(--radius-md);
-}
-
-/* Large decorative elements (modals, banners) */
-.rounded-large {
-  border-radius: var(--radius-lg);
-}
-
-/* Perfect circles (avatars, icons) */
-.rounded-full {
-  border-radius: var(--radius-full);
-}
-
 /* ---------------------------------------- */
 /* 🎥 Responsive Embedded Video Styles      */
 /* These styles keep your videos looking sharp and correctly sized on any device */
@@ -573,7 +554,28 @@ hr {
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
-
+@keyframes bounce {
+  0% {
+    transform: scale(1) rotate(-5deg);
+  }
+  50% {
+    transform: scale(1.15) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(-5deg);
+  }
+}
+@keyframes bouncealt {
+  0% {
+    transform: scale(1) rotate(3deg);
+  }
+  50% {
+    transform: scale(1.15) rotate(-1deg);
+  }
+  100% {
+    transform: scale(1) rotate(3deg);
+  }
+}
 @keyframes tiltBounce {
   0% {
     transform: scale(1) rotate(-7deg);
@@ -610,6 +612,14 @@ hr {
     width: 100%;
     transform: scale(1.25, 1) skewX(20deg) translateY(3px) rotateX(-40deg)
       rotateY(-10deg) rotateZ(-15deg);
+  }
+}
+@keyframes overlaytilt {
+  from {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(30deg);
   }
 }
 
@@ -973,6 +983,8 @@ a.nav-link-primary:hover {
 
 /* Overlay (appears on hover) */
 .overlay {
+  animation: bounce 1s ease infinite;
+  transition-duration: 0s;
   position: absolute;
   top: 0;
   right: 0;
@@ -981,7 +993,7 @@ a.nav-link-primary:hover {
   width: 100%;
   height: 100%;
   opacity: 0; /* Initially invisible */
-  transition: var(--duration-slow) ease;
+  transition: linear;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -990,7 +1002,7 @@ a.nav-link-primary:hover {
   background-color: var(
     --color-overlay-primary
   ); /* Background color of the overlay */
-  transition: opacity var(--duration-normal), visibility var(--duration-normal);
+  transition: opacity var(--duration-fast), visibility var(--duration-fast);
 }
 
 /* Hover effect on work page grid items */
