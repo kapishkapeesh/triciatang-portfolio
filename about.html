@@ -32,27 +32,70 @@
   <body class="about-page">
     <header class="hero-header">
       <ul class="nav-branding">
-        <li><a href="index.html" class="custom-navigation">Work</a></li>
+        <li class="nav-branding-item">
+          <a class="nav-link-primary" href="index.html">
+            <span class="fallback">Work</span>
+            <div class="img-wrapper">
+              <img class="normal" src="assets/branding-images/work.png" />
+              <img
+                class="active"
+                src="assets/branding-images/workactkve.png"
+              />
+            </div>
+            <div class="shape-wrapper">
+              <div class="shape red-fill jelly"><svg x="0px" y="0px"
+             viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
+        <polygon fill="#FF0000" points="29.5,8.5 150.7,0 108.1,32.7 3.1,47 "/>
+        </svg></div>
+              <div class="shape cyan-fill jelly"><svg x="0px" y="0px"
+             viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
+        <polygon fill="#0600FF" points="0.3,17 125.1,0 68.8,45.6 24.3,39 "/>
+        </svg></div>
+            </div>
+          </a>
+        </div>
+        </li>
         <li class="nav-branding-logo">
           <a href="index.html"><img src="assets/branding-images/logo.svg" /></a>
         </li>
-        <li><a href="about.html" class="custom-navigation">About</a></li>
-      </ul>
+        <li class="nav-branding-item">
+          <a class="nav-link-primary" href="about.html">
+            <span class="fallback">About</span>
+            <div class="img-wrapper">
+              <img class="normal" src="assets/branding-images/about.png">
+              <img class="active" src="assets/branding-images/aboutactive.png">
+            </div>
+            <div class="shape-wrapper">
+              <div class="shape red-fill jelly"><svg x="0px" y="0px"
+             viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
+        <polygon fill="#FF0000" points="29.5,8.5 150.7,0 108.1,32.7 3.1,47 "/>
+        </svg></div>
+              <div class="shape cyan-fill jelly"><svg x="0px" y="0px"
+             viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
+        <polygon fill="#0600FF" points="0.3,17 125.1,0 68.8,45.6 24.3,39 "/>
+        </svg></div>
+            </div>
+          </a>
+        </div>
+        </li>
     </header>
     <ul class="about-grid">
       <li class="about-grid-image">
         <figure class="about-image">
-          <img
-            src="assets/about/self-portrait.svg"
-            width="1500"
-            height="1500"
-            alt="Your Photo"
-          />
+          <div class="container">
+            <label class="switch">
+              <input type="checkbox"/>
+              <span class="slider"/>
+            </label>
+          </div>
+          <div class="image-box">
+          <img src="assets/about/self-portrait.JPG" class="darkmode">
+          <img src="assets/about/self-portrait-light-mode.jpg" class="lightmode"> 
+        </div>
         </figure>
       </li>
       <li class="about-grid-text">
         <h2>About Me.</h2>
-
         <p>
           I'm a fourth year student studying in the IDEA program at Capilano,
           based in Vancouver. I'm mainly concentrating in illustration, but I
@@ -64,46 +107,40 @@
     </ul>
     <ul class="footer-global">
       <li class="footer-tagline">
-        <h2>Let's Connect!</h2>
-        <p>
-          Feel free to reach out with any questions, collaborations, or just to
-          chat about design.
-        </p>
-      </li>
-
-      <li class="footer-highlights">
-        <h2>Awards & Recognition</h2>
-        <ul class="footer-awards-list">
-          <li class="footer-item">
-            <a href="#">Dean’s List – Year or Term</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Your Award – Name of Student Award and Year</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Honourable Mention – Project or Competition Name</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Other Recognition or Accolade</a>
-          </li>
+        <h2>Awards</h2>
+        <ul class="footer-list">
+          <li class="footer-item">Dean's List 2022-2025</li>
+          <li class="footer-item">Capic Rodeo 17 Top 10 Illustration Winner</li>
         </ul>
       </li>
-
       <li class="footer-contact-social">
-        <h2>Contact & Social</h2>
+        <h2>Contact &amp; Social</h2>
         <ul class="footer-socials-list">
-          <li class="footer-item"><a href="#">Instagram</a></li>
-          <li class="footer-item"><a href="#">LinkedIn</a></li>
-          <li class="footer-item"><a href="#">Behance</a></li>
+          <li class="footer-item">
+            <a
+              href="https://www.instagram.com/kapishkapeesh/?hl=en"
+              target="_blank"
+              >Insta</a
+            >
+          </li>
+          <li class="footer-item">
+            <a
+              href="https://www.linkedin.com/in/tricia-tang-7273a8217"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+          <li class="footer-item">
+            <a href="https://www.behance.net/triciat" target="_blank"
+              >Behance</a
+            >
+          </li>
         </ul>
       </li>
-
-      <li class="footer-full-width">
-        <p><a href="#top">Smooth scroll to the top</a></p>
+      <li class="footer-item2">
+        <a href="#top"><img class="arrow" src="assets/branding-images/arrow.png"></a>
         <p class="footer-fineprint">
-          &copy; <span id="copyright-years">2020-</span>. Hand crafted with
-          <span class="heart">❤</span>
-          by James Neufeld.
+          &copy; <span id="copyright-years">2020-</span>. Tricia Tang Portfolio
         </p>
         <script>
           document.getElementById("copyright-years").textContent +=
