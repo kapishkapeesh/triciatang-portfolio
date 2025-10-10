@@ -656,6 +656,13 @@ hr {
   margin-bottom: 1rem;
 }
 
+.project-mural-description {
+  font-size: 1.225rem;
+  line-height: 1.2;
+  color: var(--color-text-project-description);
+  margin-bottom: 20rem;
+}
+
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
 .h1-full-width,
 .h2-full-width {
@@ -1070,6 +1077,7 @@ a.nav-link-primary:hover {
   animation-fill-mode: forwards;
   display: block;
 }
+
 
 /*
 
@@ -1553,6 +1561,35 @@ opacity: 1;
 
 .arrow {
   padding: 0;
+}
+
+.project-image-pair {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-image {
+  display: flex;
+  padding-bottom: 3rem;
+}
+
+.joker-text {
+  color:#ff0000;
+  .track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: 32s linear infinite;
+  }
+  
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 }
 
 /*
