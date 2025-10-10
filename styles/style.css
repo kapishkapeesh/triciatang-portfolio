@@ -130,14 +130,14 @@
   /* Special Text Colours */
   --color-text-holding-title: #ebedf0;
   --color-text-project-category: #ffffff;
-  --color-text-project-description: #222;
+  --color-text-project-description: rgb(255, 255, 255);
   --color-text-project-sidebar: #222;
   --color-text-project-title: #ff0607;
-  --color-text-work-grid-title: #ffffff;
+  --color-text-work-grid-title: #ffffff;  
   /* Link States */
-  --color-link: #ff0607;
-  --color-link-hover: #111;
-  --color-link-visited: #5200ff;
+  --color-link: #ffffff;
+  --color-link-hover: #ff0607;
+  --color-link-visited: #ffffff;
   /* Navigation */
   --color-nav-link: #ff0607;
   --color-nav-link-hover: #321575;
@@ -888,6 +888,20 @@ a.nav-link-primary:hover {
   position: relative;
 }
 
+.instagramicon:hover {
+  animation: tiltBounce 0.15s ease;
+        animation-fill-mode: forwards;
+}
+
+.linkedinicon:hover {
+  animation: tiltBounce 0.15s ease;
+  animation-fill-mode: forwards;
+}
+
+.mailicon:hover {
+  animation: tiltBounce 0.15s ease;
+  animation-fill-mode: forwards;
+}
 
 /*
 
@@ -1045,6 +1059,38 @@ a.nav-link-primary:hover {
   /* Placeholder: no custom styles yet */
 }
 
+#leftnormal:hover {
+  animation: tiltBounce 0.15s ease;
+  animation-fill-mode: forwards;
+  display: block;
+}
+
+#leftactive {
+  display:none;
+}
+
+#rightactive:hover {
+  display: block;
+}
+
+#rightnormal:hover {
+  animation: tiltBounce 0.15s ease;
+  animation-fill-mode: forwards;
+  display: block;
+}
+
+#rightactive {
+  display:none;
+}
+
+#rightactive:hover {
+  display: block;
+}
+
+
+
+
+
 /*
 
 ███████ ██ ██████  ███████ ██████   █████  ██████  
@@ -1071,6 +1117,8 @@ a.nav-link-primary:hover {
 .sidebar-nav-item {
   margin-bottom: 1rem; /* Space between each navigation item */
 }
+
+
 
 /* 
 
@@ -1110,6 +1158,8 @@ a.nav-link-primary:hover {
   grid-row: 2 / 3; /* Text spans the second row */
   max-width: 50%;
 }
+
+
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
 
 .container {
@@ -1239,21 +1289,20 @@ input:checked + .slider:after {
 }
   
 .darkmode{
-opacity: 0;
+opacity: 1;
 }
 
 .lightmode {
-  opacity: 1;
-}
-
-input:checked + .darkmode {
   opacity: 0;
-  display: block;
+  position: absolute;
 }
 
-input:checked + .lightmode {
+#toggle:checked ~ .darkmode {
+  opacity: 0;   
+}
+
+#toggle:checked ~ .lightmode {
   opacity: 1;
-  display: none;
 }
 
 
@@ -1286,6 +1335,16 @@ input:checked + .lightmode {
 .arrow {
   height: 200px;
   width: 200px;
+}
+
+.toparrow {
+  height: 150px;
+  width: 150px;
+}
+
+.toparrow:hover {
+  animation: tiltBounce 0.15s ease;
+  animation-fill-mode: forwards;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -1795,7 +1854,7 @@ to keep your styles reusable and consistent.
   /* Main Project Image Area on Large Devices */
 
   .project-details {
-    width: 65%;
+    width: 100%;
   }
 
   .project-image-container,
