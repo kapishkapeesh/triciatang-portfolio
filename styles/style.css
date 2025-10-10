@@ -1065,31 +1065,11 @@ a.nav-link-primary:hover {
   display: block;
 }
 
-#leftactive {
-  display:none;
-}
-
-#rightactive:hover {
-  display: block;
-}
-
 #rightnormal:hover {
   animation: tiltBounce 0.15s ease;
   animation-fill-mode: forwards;
   display: block;
 }
-
-#rightactive {
-  display:none;
-}
-
-#rightactive:hover {
-  display: block;
-}
-
-
-
-
 
 /*
 
@@ -1411,6 +1391,7 @@ opacity: 1;
   margin-bottom: 0.25rem;
   text-align: center;
 }
+
 
 /* ------------------------------- */
 /* ▪️ Bullet List Style */
