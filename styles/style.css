@@ -910,6 +910,11 @@ a.nav-link-primary:hover {
   animation-fill-mode: forwards;
 }
 
+.play-image {
+  align-items: left;
+}
+
+
 /*
 
  ██████  ██████  ███    ███ ██████   ██████  ███    ██ ███████ ███    ██ ████████ ███████ 
