@@ -230,6 +230,7 @@ body {
   ); /* Uses your custom color for highlighted text */
 }
 
+
 /* ---------------------------------------- */
 /* 🖼️ Responsive Image Styles */
 /* These styles make your images and icons look good on any screen size */
@@ -303,7 +304,7 @@ svg {
 
 /* Smooth transition when applying transformations – improves hover experience */
 .rotate {
-  transition: transform 0.3s ease;
+  transition: transform 0.0s linear;
 }
 
 /* Rotates the element slightly on hover – adds a playful effect */
@@ -361,6 +362,7 @@ svg {
   padding: var(--padding-small);
 }
 
+
 /* ------------------------------------------------------------------ */
 /* 🔤 Global & Mobile Typography                                      */
 /* Heading styles that scale nicely for mobile-first, responsive sites */
@@ -403,7 +405,7 @@ h4 {
   font-size: 1.2rem;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: var(--h4-color);
+  color:#f5f5f5;
 }
 
 h5 {
@@ -638,6 +640,8 @@ hr {
   max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: left; /* Horizontally centers the text in its container */
+  z-index: 1;
+  position: relative;
 }
 
 /* Large project title — appears on individual project pages */
@@ -661,6 +665,14 @@ hr {
   line-height: 1.2;
   color: var(--color-text-project-description);
   margin-bottom: 20rem;
+}
+
+.team-person {
+  color:#f5f5f5;
+}
+
+.team-members {
+  line-height: 2rem;
 }
 
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
@@ -816,6 +828,7 @@ a.nav-link-primary:hover {
   left: 500px;
   top: 15%;
   max-width: 100%;
+  z-index: 9999;
 }
 
 .nav-branding {
@@ -893,6 +906,16 @@ a.nav-link-primary:hover {
   line-height: 60px;
   padding: 33px;
   position: relative;
+  z-index: 9999;
+}
+
+.socialicons-about {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .instagramicon:hover {
@@ -912,6 +935,10 @@ a.nav-link-primary:hover {
 
 .play-image {
   align-items: left;
+}
+
+.personal-description {
+
 }
 
 
@@ -988,6 +1015,8 @@ a.nav-link-primary:hover {
 /* Work wrapper (takes up available space) */
 .main-work-section {
   flex: 1;
+  background-color: #000;
+  z-index: 2;
 }
 
 /* Padding around work grid and project page */
@@ -1153,6 +1182,7 @@ a.nav-link-primary:hover {
 }
 
 
+
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
 
 .container {
@@ -1269,7 +1299,6 @@ input:checked + .slider:after {
   position: relative;
   width: 300px;
   height: auto;
-  margin-top: 20px;
 }
 
 .image-box img {
@@ -1321,6 +1350,7 @@ opacity: 1;
   min-height: auto; /* Allows footer to expand based on content, no fixed height */
   background: var(--color-bg-footer); /* Using CSS variable for theming */
   padding: var(--padding-small); /* Internal spacing */
+  z-index: 9999;
 
   /* Note: Using 'fr' units ensures proper scaling across devices */
 }
@@ -1515,10 +1545,11 @@ opacity: 1;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  background: var(--color-bg-project-description);
+  background: transparent;
   padding: var(--padding-small);
   width: 100%;
   margin-bottom: 1rem; /* Space below the description */
+  gap: 4rem;
 }
 
 /* Column styles for two-column layouts */
@@ -1577,6 +1608,34 @@ opacity: 1;
   align-items: center;
 }
 
+.project-image-pair2 {
+  display: flex;
+  flex-direction: row;
+  gap: 0rem;
+  align-items: right;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+  justify-content: right;
+}
+
+.project-image-pair-comic {
+  display: flex;
+  flex-direction: row;
+  gap: 0rem;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image-trio {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .side-image {
   display: flex;
   padding-bottom: 3rem;
@@ -1595,6 +1654,10 @@ opacity: 1;
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
   }
+}
+
+.award {
+  margin-top: 3rem;
 }
 
 /*
@@ -1683,6 +1746,7 @@ opacity: 1;
 .error-headline-wrapper {
   width: 85%;
   display: flex;
+  color:#f8f8ff;
   flex-direction: column;
   flex: 1;
   align-items: center;
@@ -1692,8 +1756,12 @@ opacity: 1;
   margin: 0 auto;
 }
 
-.error-page-animation {
-  width: 25rem;
+.error-headline {
+  font-size: 10rem;
+  font-family: "Squada One", sans-serif;
+  color: #0600ff;
+  position: relative;
+  top: 10%;
 }
 
 /*
@@ -1751,11 +1819,36 @@ to keep your styles reusable and consistent.
 
 /* Media Queries for Layout Adjustments */
 
+@media (min-width: 430px) {
+  .about-grid-text {
+    max-width: 700px;
+  }
+
+  .hero-header {
+  
+  }
+}
+
+
+/@media (min-width: 430px) {
+  .hero-image {
+    width: 500px;
+    padding: 0rem;
+    left: 0.5rem;
+    top: 20rem;
+  }
+  
+  .hero-headline {
+    font-size: 7rem;
+    top: 10%;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
-  /* TODO: Adjust  layout for tablets */
 }
+
 
 /* Large devices (desktops, 992px and up) */
 
@@ -1800,6 +1893,7 @@ to keep your styles reusable and consistent.
   }
   .nav-branding-logo {
     width: 6rem;
+    z-index: 9999;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
@@ -1818,10 +1912,6 @@ to keep your styles reusable and consistent.
     padding-bottom: var(--padding-small);
     padding-left: var(--padding-ultra);
     padding-right: var(--padding-ultra);
-  }
-
-  .error-404 {
-    font-size: 5rem;
   }
 
   /* Work Page Grid for Large Devices */
@@ -1899,6 +1989,73 @@ to keep your styles reusable and consistent.
 
   .arrow {
     padding-right: 1rem;
+    padding-top: 3rem;
+  }
+  
+  .project1-text {
+    color:#f5f5f5;
+    max-width: 50%;
+  }
+
+  .project1-text-1 {
+    color:#f5f5f5;
+    max-width: 50%;
+  }
+
+  .project1-text2 {
+    color:#f5f5f5;
+    max-width: 100%;
+  }
+
+  .key-art {
+    margin-bottom: 3rem;
+  }
+
+  .project1-pair {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    align-items: right;
+    justify-content: right;
+    margin-left: 4rem;
+  }
+
+  .project1-pair2 {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: right;
+    justify-content: right;
+    margin-left: 2rem;
+  }
+
+  .project1-textpair {
+    color:#f5f5f5;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    max-width: 50%;
+    margin-right: 7rem;
+  }
+
+  .project1-textpair2 {
+    color:#f5f5f5;
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    align-items: right;
+    justify-content: right;
+  }
+
+  .personal-work-heading {
+    margin-left: 4rem;
+  }
+
+  .personal-work-description {
+    margin-left: 4rem;
+    max-width: 60%;
+    color:#f5f5f5;
   }
 
   /* About Page Grid for Large Devices */
@@ -1915,6 +2072,7 @@ to keep your styles reusable and consistent.
   .about-grid-text {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
+    max-width: 620px;
   }
 
   /* ------------------------------- */
