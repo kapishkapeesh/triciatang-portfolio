@@ -1819,34 +1819,84 @@ to keep your styles reusable and consistent.
 
 /* Media Queries for Layout Adjustments */
 
-@media (min-width: 430px) {
+@media (max-width: 430px) {
   .about-grid-text {
     max-width: 700px;
   }
 
-  .hero-header {
-  
-  }
-}
-
-
-/@media (min-width: 430px) {
   .hero-image {
-    width: 500px;
+    width: 96%;
     padding: 0rem;
     left: 0.5rem;
-    top: 20rem;
+    top: 10rem;
   }
   
   .hero-headline {
     font-size: 7rem;
     top: 10%;
   }
+  
+  .hero-body {
+    font-size: 1.3rem;
+    width: 90%;
+    margin-top: 3rem;
+  }
+  
+  .nav-branding {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .socialicons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  
+    .socialicons img {
+      width: 28px;
+      height: 28px;
+      margin-top: 2rem;
+    }
+
+    .footer-global {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      gap: 2rem;
+    }
+  
+    .footer-item2 img.toparrow {
+      width: 120px;
+    }
+
+    .footer-contact-social {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* optional, hides horizontal scroll */
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+
 }
 
 
