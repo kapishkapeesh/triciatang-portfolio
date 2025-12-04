@@ -335,8 +335,7 @@ svg {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (because 9 ÷ 16 = 0.5625) */
-  margin-bottom: 1rem;
+  padding-top: 5%; /* 16:9 Aspect Ratio (because 9 ÷ 16 = 0.5625) */
 }
 /* The iframe is absolutely positioned to fill the container */
 .responsive-iframe {
@@ -1181,6 +1180,22 @@ a.nav-link-primary:hover {
   max-width: 50%;
 }
 
+.selfportrait {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bordergif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;          /* match the selfportrait size */
+  object-fit: cover;     /* keeps GIF filling the space */
+  z-index: 2;
+}
+
 
 
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
@@ -1764,6 +1779,7 @@ opacity: 1;
   top: 10%;
 }
 
+
 /*
 
 ██████  ██       █████  ██    ██ 
@@ -1890,7 +1906,38 @@ to keep your styles reusable and consistent.
       max-width: 100%;
       height: auto;
     }
+
+    .project-video-container {
+      width: 750px;
+    }
   }
+
+  /* Make the figure the positioning context */
+.about-image {
+  position: relative; /* allows absolute positioning of children */
+  width: 90%;         /* responsive width */
+  max-width: 600px;   /* optional maximum size */
+  margin: 0 auto;     /* centers figure horizontally */
+}
+
+/* Self portrait image */
+.selfportrait {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Red border GIF */
+.bordergif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;          /* match the selfportrait size */
+  object-fit: cover;     /* keeps GIF filling the space */
+  z-index: 2;
+}
+
 }
 
 /* Medium devices (tablets, 768px and up) */
