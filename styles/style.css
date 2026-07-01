@@ -1768,9 +1768,14 @@ opacity: 1;
   }
 }
 
-.award {
-  margin-top: 3rem;
+.applied-logo {
+  margin-top: 2rem;
 }
+
+.applied-award {
+  margin-top: 2rem;
+}
+
 
 /*
 
