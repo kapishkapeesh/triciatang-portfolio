@@ -974,6 +974,14 @@ a.nav-link-primary:hover {
   gap: 3rem;
 }
 
+.misc-design {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  flex-direction: row;
+  gap: 3rem;
+}
+
 .demon-design {
   display: flex;
   justify-content: center;
@@ -2045,6 +2053,14 @@ to keep your styles reusable and consistent.
     gap: 3rem;
   }
 
+  .misc-design {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
   .snake-design {
     display: flex;
     justify-content: center;
@@ -2184,6 +2200,14 @@ to keep your styles reusable and consistent.
   }
 
 .bird-design {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.misc-design {
   display: flex;
   justify-content: center;
   margin-top: 30px;
